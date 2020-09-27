@@ -1,0 +1,36 @@
+<div class="container	content">
+    <div class="row">
+        <div class="col-md-6	offset-md-3">
+            <span class="anchor" id="formLogin"></span>
+            <!-- form	card	login	with	validation	feedback	-->
+            <div class="card	card-outline-secondary">
+                <div class="card-header">
+                    <h3 class="mb-0">Productos</h3>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="container-fluid">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ingresar nombre..."#nombre>
+                        </div>
+                        <div class="container-fluid">
+                            <label for="Imagen	Url">Precio</label>
+                            <input type="text" class="form-control" id="precio" placeholder="Ingresar el precio"#url>
+                        </div>
+                        <div class="container-fluid">
+                            <label for="descripcion">Descripcion</label>
+                            <input type="text" class="form-control" id="descripcion" placeholder="Ingresar breve descripcion..."#descripcion>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn	btn-primary"
+                            (click)="guardar(nombre.value, url.value, descripcion.value)">Guardar!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="mb-5">
+    <div class="row">
+        <app-producto *ngFor="let d of conjuntoProductos"[producto]="d"></app-producto>
+    </div>
+</div>
